@@ -269,11 +269,11 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
-// spawn-at-startup "qs" "-c" "noctalia-shell"
+//spawn-at-startup "qs" "-c" "noctalia-shell"
 
 spawn-at-startup "swww-daemon"
 
-// spawn-at-startup "swww img /usr/bin/wallpapers/wall.jpg"
+spawn-at-startup "swww img $HOME/.config/niri/wallpapers/wall.jpg"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -309,6 +309,7 @@ animations {
     // slowdown 3.0
 }
 
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
@@ -321,6 +322,10 @@ window-rule {
     // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
+
+    geometry-corner-radius 12
+
+    clip-to-geometry true
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -330,6 +335,10 @@ window-rule {
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
+    
+    clip-to-geometry true
+
+    geometry-corner-radius 12
 }
 
 // Example: block out two password managers from screen capture.
@@ -339,7 +348,10 @@ window-rule {
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
     block-out-from "screen-capture"
+    
+    clip-to-geometry true
 
+    geometry-corner-radius 12
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
 }
@@ -347,6 +359,13 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+
+    opacity 0.9
+}
+
+window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
@@ -626,7 +645,7 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 
-    Mod+Z { spawn "AyuGram"; }
+    Mod+Z { spawn "Telegram"; }
     Mod+P { spawn "dolphin"; }
     Mod+C { spawn "firefox"; }
 }

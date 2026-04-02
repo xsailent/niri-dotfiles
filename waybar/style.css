@@ -4,16 +4,14 @@
     font-size: 13px;
 }
 
+
 window#waybar {
-    background-color: rgba(0, 0, 0, 0); /* rgba(43, 48, 59, 0.5); */
-    border-bottom: /* 3px */ 0px solid  rgba(100, 114, 125, 0.5);
+    background-color: rgba(0, 0, 0, 0); /*rgba(43, 48, 59, 1);*/
+    border-bottom: /*3px*/  0px solid  rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
+    margin-top: 10px;
 }
 
 /*
@@ -21,7 +19,7 @@ window#waybar.empty {
     background-color: transparent;
 }
 window#waybar.solo {
-    background-color: #FFFFFF;
+    background-color: #454545;
 }
 */
 
@@ -30,7 +28,7 @@ window#waybar.termite {
 }
 
 window#waybar.chromium {
-    background-color: #000000;
+    background-color: #454545;
     border: none;
 }
 
@@ -116,13 +114,13 @@ button:hover {
 }
 
 #clock {
-    background-color: #403f3f;
+    background-color: #454545;
     border-radius: 10px;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #454545;
+    color: #ffffff;
 }
 
 #battery.charging, #battery.plugged {
@@ -132,8 +130,8 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #454545;
+        color: #ffffff;
     }
 }
 
@@ -153,40 +151,40 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #403f3f;
+    background-color: #454545;
     color: #ffffff;
 	border-radius: 10px;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #403f3f;
+    background-color: #454545;
     color: #ffffff;
     border-radius: 10px;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #403f3f;
-    color: #000000;
+    background-color: #454545;
+    color: #ffffff;
     border-radius: 10px;
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: #454545;
 }
 
 #cpu {
-    background-color: #403f3f;
+    background-color: #454545;
     color: #ffffff;
     border-radius: 10px;
 }
 
 #memory {
-    background-color: #403f3f;
+    background-color: #454545;
     border-radius: 10px;
 }
 
 #disk {
-    background-color: #403f3f;
+    background-color: #454545;
     border-radius: 10px;
 }
 
@@ -204,19 +202,19 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #403f3f;
+    background-color: #454545;
     color: #ffffff;
     border-radius: 10px;
 }
 
 #pulseaudio.muted {
-    background-color: #403f3f;
+    background-color: #454545;
     color: #ffffff;
     border-radius: 10px;
 }
 
 #wireplumber {
-    background-color: #403f3f;
+    background-color: #454545;
     color: #ffffff;
     border-radius: 10px;
 }
@@ -227,7 +225,7 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #403f3f;
+    background-color: #454545;
     color: #ffffff;
     min-width: 100px;
     border-radius: 10px;
@@ -244,7 +242,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #403f3f;
+    background-color: #454545;
     border-radius: 10px;
 }
 
@@ -253,7 +251,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #403f3f;
+    background-color: #454545;
     border-radius: 10px;
 }
 
@@ -270,7 +268,7 @@ label:focus {
 
 #idle_inhibitor {
     background-color: #2d3436;
-	border-radius: 10px;
+	  border-radius: 10px;
 }
 
 #idle_inhibitor.activated {
@@ -281,7 +279,7 @@ label:focus {
 #mpd {
     background-color: #66cc99;
     color: #2a5c45;
-	border-radius: 10px;
+	  border-radius: 10px;
 }
 
 #mpd.disconnected {
@@ -297,13 +295,13 @@ label:focus {
 }
 
 #language {
-    background-color: #403f3f;
+    background-color: #454545;
     color: #ffffff;
     border-radius: 10px;
 }
 
 #keyboard-state {
-    background: #403f3f;
+    background: #ffffff;
     color: #ffffff;
     padding: 0 0px;
     margin: 0 5px;
@@ -351,7 +349,12 @@ label:focus {
 }
 
 #media {
-    background-color: #403f3f;
+    background-color: #454545;
     color: #ffffff;
-	border-radius: 10px;
+	  border-radius: 10px;
+}
+
+tooltip {
+  background-color: #181825;
+  border: 2px solid #89b4fa;
 }
